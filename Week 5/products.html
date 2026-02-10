@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background-color: #fff;">
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- Brand -->
+                <a class="navbar-brand me-4" href="index.html">
+                    <i class="fa-solid fa-cart-shopping me-2"></i>E-Shop
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Content -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+
+                    <!-- Search Bar -->
+                    <form class="d-flex navbar-search my-2 my-lg-0" role="search">
+                        <div class="input-group">
+
+                            <input class="form-control" type="search" placeholder="Search E-Shop" aria-label="Search">
+                            <button class="btn btn-search" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Nav Links -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <div class="small">Hello, Sign in</div>
+                                <div class="fw-bold">Account & Lists</div>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="cart.html">
+                                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                                <span
+                                    class="badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill"
+                                    id="cart-badge-count">0</span>
+                                <span class="fw-bold ms-1">Cart</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sub-header for Categories -->
+        <div class="bg-dark text-white py-1 px-3 d-none d-lg-block" style="background-color: #232f3e !important;">
+            <div class="container-fluid d-flex align-items-center">
+                <a href="javascript:void(0)" id="nav-hamburger-menu" class="text-white text-decoration-none me-3"><i
+                        class="fa-solid fa-bars me-1"></i></a>
+                <a href="products.html" class="text-white text-decoration-none me-3">All Products</a>
+                <a href="todays-deals.html" class="text-white text-decoration-none me-3">Today's Deals</a>
+                <a href="customer-service.html" class="text-white text-decoration-none me-3">Customer Service</a>
+                <a href="registry.html" class="text-white text-decoration-none me-3">Registry</a>
+                <a href="gift-cards.html" class="text-white text-decoration-none me-3">Gift Cards</a>
+                <a href="sell.html" class="text-white text-decoration-none me-3">Sell</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container-fluid my-4">
+        <div class="row">
+            <!-- Sidebar / Filter Section -->
+            <aside class="col-lg-2 col-md-3 d-none d-md-block filter-section border-end bg-white">
+                <div class="p-2">
+                    <h5>Department</h5>
+                    <a href="#" class="filter-link active fw-bold" data-category="all">All Departments</a>
+                    <a href="#" class="filter-link" data-category="electronics">Electronics</a>
+                    <a href="#" class="filter-link" data-category="computers">Computers & Accessories</a>
+                    <a href="#" class="filter-link" data-category="smart-home">Smart Home</a>
+                    <a href="#" class="filter-link" data-category="headphones">Headphones</a>
+                    <a href="#" class="filter-link" data-category="camera">Camera & Photo</a>
+                    <a href="#" class="filter-link" data-category="fashion">Fashion</a>
+                    <a href="#" class="filter-link" data-category="home-kitchen">Home & Kitchen</a>
+
+                    <hr class="my-3">
+
+                    <h5>Customer Reviews</h5>
+                    <a href="#" class="filter-link" data-rating="4">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                        & Up
+                    </a>
+                    <a href="#" class="filter-link" data-rating="3">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                        & Up
+                    </a>
+                    <a href="#" class="filter-link" data-rating="2">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                        & Up
+                    </a>
+                    <a href="#" class="filter-link" data-rating="1">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                        & Up
+                    </a>
+
+                    <hr class="my-3">
+
+                    <h5>Price</h5>
+                    <a href="#" class="filter-link" data-price-min="0" data-price-max="25">Under $25</a>
+                    <a href="#" class="filter-link" data-price-min="25" data-price-max="50">$25 to $50</a>
+                    <a href="#" class="filter-link" data-price-min="50" data-price-max="100">$50 to $100</a>
+                    <a href="#" class="filter-link" data-price-min="100" data-price-max="200">$100 to $200</a>
+                    <a href="#" class="filter-link" data-price-min="200" data-price-max="999999">$200 & Above</a>
+                    <div class="d-flex mt-2 align-items-center">
+                        <input type="text" id="min-price-input" class="form-control form-control-sm me-1"
+                            placeholder="$ Min">
+                        <input type="text" id="max-price-input" class="form-control form-control-sm ms-1"
+                            placeholder="$ Max">
+                        <button id="price-go-btn" class="btn btn-sm btn-outline-secondary ms-2">Go</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Product Grid Section -->
+            <div class="col-lg-10 col-md-9">
+                <!-- Results Header & Sort -->
+                <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
+                    <span class="small">1-12 of over 2,000 results for <span class="fw-bold text-danger">"All
+                            Departments"</span></span>
+                    <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle rounded-pill shadow-sm"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort by: Featured
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow">
+                            <li><a class="dropdown-item active" href="#" data-sort="featured">Featured</a></li>
+                            <li><a class="dropdown-item" href="#" data-sort="price-low">Price: Low to High</a></li>
+                            <li><a class="dropdown-item" href="#" data-sort="price-high">Price: High to Low</a></li>
+                            <li><a class="dropdown-item" href="#" data-sort="rating">Avg. Customer Review</a></li>
+                            <li><a class="dropdown-item" href="#" data-sort="newest">Newest Arrivals</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3">
+                    <!-- Product 1 -->
+                    <!-- Product 1 -->
+                    <div class="col product-item" data-category="headphones" data-price="199.99" data-rating="4.5">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative text-center bg-white rounded p-2">
+                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                                    class="card-img-top" alt="Headphones">
+                            </div>
+                            <div class="card-body px-0 pt-2">
+                                <a href="product-details.html" class="text-decoration-none text-dark">
+                                    <h5 class="card-title text-truncate">Premium Wireless Headphones</h5>
+                                </a>
+                                <div class="rating mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <span class="text-muted small ms-1">2,401</span>
+                                </div>
+                                <div class="price mb-1">
+                                    <span class="small align-top">$</span>199<span class="small align-top">99</span>
+                                </div>
+                                <div class="small text-muted mb-2">Delivery <span class="fw-bold">Mon, Dec 25</span>
+                                </div>
+                                <button class="btn btn-primary-custom w-100 btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <!-- Product 2 -->
+                    <div class="col product-item" data-category="computers" data-price="749.00" data-rating="4">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative text-center bg-white rounded p-2">
+                                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                                    class="card-img-top" alt="Laptop">
+                            </div>
+                            <div class="card-body px-0 pt-2">
+                                <a href="product-details.html" class="text-decoration-none text-dark">
+                                    <h5 class="card-title text-truncate">Ultra-Slim Laptop 15.6"</h5>
+                                </a>
+                                <div class="rating mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span class="text-muted small ms-1">350</span>
+                                </div>
+                                <div class="price mb-1">
+                                    <span class="small align-top">$</span>749<span class="small align-top">00</span>
+                                </div>
+                                <div class="small text-muted mb-2">Delivery <span class="fw-bold">Mon, Dec 25</span>
+                                </div>
+                                <button class="btn btn-primary-custom w-100 btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <!-- Product 3 -->
+                    <div class="col product-item" data-category="camera" data-price="599.00" data-rating="5">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative text-center bg-white rounded p-2">
+                                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                                    class="card-img-top" alt="Camera">
+                            </div>
+                            <div class="card-body px-0 pt-2">
+                                <a href="product-details.html" class="text-decoration-none text-dark">
+                                    <h5 class="card-title text-truncate">4K Digital Camera with Lens</h5>
+                                </a>
+                                <div class="rating mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="text-muted small ms-1">89</span>
+                                </div>
+                                <div class="price mb-1">
+                                    <span class="small align-top">$</span>599<span class="small align-top">00</span>
+                                </div>
+                                <div class="small text-muted mb-2">Delivery <span class="fw-bold">Tue, Dec 26</span>
+                                </div>
+                                <button class="btn btn-primary-custom w-100 btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <!-- Product 4 -->
+                    <div class="col product-item" data-category="electronics" data-price="49.99" data-rating="3">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative text-center bg-white rounded p-2">
+                                <img src="images/smart-band.png" class="card-img-top" alt="Smart Watch">
+                            </div>
+                            <div class="card-body px-0 pt-2">
+                                <a href="product-details.html" class="text-decoration-none text-dark">
+                                    <h5 class="card-title text-truncate">Fitness Tracker Smart Watch</h5>
+                                </a>
+                                <div class="rating mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span class="text-muted small ms-1">1,029</span>
+                                </div>
+                                <div class="price mb-1">
+                                    <span class="small align-top">$</span>49<span class="small align-top">99</span>
+                                </div>
+                                <div class="small text-muted mb-2">Delivery <span class="fw-bold">Tomorrow</span></div>
+                                <button class="btn btn-primary-custom w-100 btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <!-- Product 5 -->
+                    <div class="col product-item" data-category="electronics" data-price="399.00" data-rating="5">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative text-center bg-white rounded p-2">
+                                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                                    class="card-img-top" alt="Smart Watch">
+                            </div>
+                            <div class="card-body px-0 pt-2">
+                                <a href="product-details.html" class="text-decoration-none text-dark">
+                                    <h5 class="card-title text-truncate">Smart Watch Series 5</h5>
+                                </a>
+                                <div class="rating mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="text-muted small ms-1">452</span>
+                                </div>
+                                <div class="price mb-1">
+                                    <span class="small align-top">$</span>399<span class="small align-top">00</span>
+                                </div>
+                                <div class="small text-muted mb-2">Delivery <span class="fw-bold">Mon, Dec 25</span>
+                                </div>
+                                <button class="btn btn-primary-custom w-100 btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <!-- Product 6 -->
+                    <div class="col product-item" data-category="fashion" data-price="85.50" data-rating="3.5">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative text-center bg-white rounded p-2">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                                    class="card-img-top" alt="Sneakers">
+                            </div>
+                            <div class="card-body px-0 pt-2">
+                                <a href="product-details.html" class="text-decoration-none text-dark">
+                                    <h5 class="card-title text-truncate">Red Athletic Running Shoes</h5>
+                                </a>
+                                <div class="rating mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span class="text-muted small ms-1">210</span>
+                                </div>
+                                <div class="price mb-1">
+                                    <span class="small align-top">$</span>85<span class="small align-top">50</span>
+                                </div>
+                                <div class="small text-muted mb-2">Delivery <span class="fw-bold">Wed, Dec 27</span>
+                                </div>
+                                <button class="btn btn-primary-custom w-100 btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <!-- Product 7 -->
+                    <div class="col product-item" data-category="electronics" data-price="699.00" data-rating="4">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative text-center bg-white rounded p-2">
+                                <img src="images/smartphone.png" class="card-img-top" alt="Phone">
+                            </div>
+                            <div class="card-body px-0 pt-2">
+                                <a href="product-details.html" class="text-decoration-none text-dark">
+                                    <h5 class="card-title text-truncate">Smartphone 128GB Unlocked</h5>
+                                </a>
+                                <div class="rating mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span class="text-muted small ms-1">1,100</span>
+                                </div>
+                                <div class="price mb-1">
+                                    <span class="small align-top">$</span>699<span class="small align-top">00</span>
+                                </div>
+                                <div class="small text-muted mb-2">Delivery <span class="fw-bold">Mon, Dec 25</span>
+                                </div>
+                                <button class="btn btn-primary-custom w-100 btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="col product-item" data-category="electronics" data-price="249.99" data-rating="4.5">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative text-center bg-white rounded p-2">
+                                <img src="images/modern-smartwatch.png" class="card-img-top" alt="Smart Watch">
+                            </div>
+                            <div class="card-body px-0 pt-2">
+                                <a href="product-details.html" class="text-decoration-none text-dark">
+                                    <h5 class="card-title text-truncate">Modern Smart Watch Black</h5>
+                                </a>
+                                <div class="rating mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <span class="text-muted small ms-1">890</span>
+                                </div>
+                                <div class="price mb-1">
+                                    <span class="small align-top">$</span>249<span class="small align-top">99</span>
+                                </div>
+                                <div class="small text-muted mb-2">Delivery <span class="fw-bold">Tue, Dec 26</span>
+                                </div>
+                                <button class="btn btn-primary-custom w-100 btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="col product-item" data-category="home-kitchen" data-price="89.00" data-rating="4.5">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative text-center bg-white rounded p-2">
+                                <img src="images/coffee-maker.png" class="card-img-top" alt="Coffee Maker">
+                            </div>
+                            <div class="card-body px-0 pt-2">
+                                <a href="product-details.html" class="text-decoration-none text-dark">
+                                    <h5 class="card-title text-truncate">Premium Coffee Maker</h5>
+                                </a>
+                                <div class="rating mb-1">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                                    <span class="text-muted small ms-1">1,240</span>
+                                </div>
+                                <div class="price mb-1">
+                                    <span class="small align-top">$</span>89<span class="small align-top">00</span>
+                                </div>
+                                <div class="small text-muted mb-2">Delivery <span class="fw-bold">Thu, Dec 21</span>
+                                </div>
+                                <button class="btn btn-primary-custom w-100 btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 10 -->
+                    <div class="col product-item" data-category="home-kitchen" data-price="120.00" data-rating="4">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative text-center bg-white rounded p-2">
+                                <img src="images/cookware-set.png" class="card-img-top" alt="Cookware Set">
+                            </div>
+                            <div class="card-body px-0 pt-2">
+                                <a href="product-details.html" class="text-decoration-none text-dark">
+                                    <h5 class="card-title text-truncate">Non-Stick Cookware Set</h5>
+                                </a>
+                                <div class="rating mb-1">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-regular fa-star text-warning"></i>
+                                    <span class="text-muted small ms-1">560</span>
+                                </div>
+                                <div class="price mb-1">
+                                    <span class="small align-top">$</span>120<span class="small align-top">00</span>
+                                </div>
+                                <div class="small text-muted mb-2">Delivery <span class="fw-bold">Fri, Dec 22</span>
+                                </div>
+                                <button class="btn btn-primary-custom w-100 btn-sm">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Pagination -->
+                <nav class="mt-5" aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="text-center py-3 mb-4">
+            <a href="#" class="text-white text-decoration-none">Back to top</a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Get to Know Us</h5>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Blog</a>
+                    <a href="#" class="footer-link">About E-Shop</a>
+                    <a href="#" class="footer-link">Investor Relations</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Make Money with Us</h5>
+                    <a href="#" class="footer-link">Sell products on E-Shop</a>
+                    <a href="#" class="footer-link">Sell on E-Shop Business</a>
+                    <a href="#" class="footer-link">Sell apps on E-Shop</a>
+                    <a href="#" class="footer-link">Become an Affiliate</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Payment Products</h5>
+                    <a href="#" class="footer-link">Business Card</a>
+                    <a href="#" class="footer-link">Shop with Points</a>
+                    <a href="#" class="footer-link">Reload Your Balance</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Let Us Help You</h5>
+
+                    <a href="#" class="footer-link">Your Orders</a>
+                    <a href="#" class="footer-link">Shipping Rates & Policies</a>
+                    <a href="#" class="footer-link">Returns & Replacements</a>
+                    <a href="#" class="footer-link">Help</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <a class="navbar-brand d-inline-block mb-3" href="#">E-Shop</a>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2026 E-Shop, Inc. or its affiliates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sidenav / Mobile Menu -->
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenav-header">
+            <i class="fa-solid fa-user-circle"></i> Hello, Sign in
+        </div>
+        <div class="sidenav-content">
+
+
+            <div class="sidenav-section-title">Shop By Department</div>
+            <a href="products.html">Electronics <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Computers <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Smart Home <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Arts & Crafts <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Programs & Features</div>
+            <a href="gift-cards.html">Gift Cards <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="registry.html">Registry <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="sell.html">Sell on E-Shop <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Help & Settings</div>
+
+            <a href="customer-service.html">Customer Service</a>
+            <a href="login.html">Sign In</a>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="closeBtn" class="close-btn-container">&times;</div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

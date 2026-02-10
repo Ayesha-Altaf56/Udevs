@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop - Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- Brand -->
+                <a class="navbar-brand me-4" href="index.html">
+                    <i class="fa-solid fa-cart-shopping me-2"></i>E-Shop
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Content -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+
+                    <!-- Search Bar -->
+                    <form class="d-flex navbar-search my-2 my-lg-0" role="search">
+                        <div class="input-group">
+
+                            <input class="form-control" type="search" placeholder="Search E-Shop" aria-label="Search">
+                            <button class="btn btn-search" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Nav Links -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <div class="small">Hello, Sign in</div>
+                                <div class="fw-bold">Account & Lists</div>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="cart.html">
+                                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                                <span
+                                    class="badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill"
+                                    id="cart-badge-count">0</span>
+                                <span class="fw-bold ms-1">Cart</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sub-header for Categories -->
+        <div class="bg-dark text-white py-1 px-3 d-none d-lg-block" style="background-color: #232f3e !important;">
+            <div class="container-fluid d-flex align-items-center">
+                <a href="javascript:void(0)" id="nav-hamburger-menu" class="text-white text-decoration-none me-3"><i
+                        class="fa-solid fa-bars me-1"></i></a>
+                <a href="products.html" class="text-white text-decoration-none me-3">All Products</a>
+                <a href="todays-deals.html" class="text-white text-decoration-none me-3">Today's Deals</a>
+                <a href="customer-service.html" class="text-white text-decoration-none me-3">Customer Service</a>
+                <a href="registry.html" class="text-white text-decoration-none me-3">Registry</a>
+                <a href="gift-cards.html" class="text-white text-decoration-none me-3">Gift Cards</a>
+                <a href="sell.html" class="text-white text-decoration-none me-3">Sell</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <!-- Background image handles visual -->
+        </section>
+
+        <!-- Categories & Features Container -->
+        <div class="container-fluid px-4" style="margin-top: -250px; position: relative; z-index: 2;">
+            <!-- Categories Row -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <div class="card category-card h-100">
+                        <h3 class="card-title">Electronics</h3>
+                        <img src="https://images.unsplash.com/photo-1511385348-a52b4a160dc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                            class="category-img" alt="Electronics">
+                        <a href="products.html?category=electronics" class="btn-link text-decoration-none">See more</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card category-card h-100">
+                        <h3 class="card-title">Fashion Trends</h3>
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                            class="category-img" alt="Fashion">
+                        <a href="products.html?category=fashion" class="btn-link text-decoration-none">Explore now</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card category-card h-100">
+                        <h3 class="card-title">Home & Kitchen</h3>
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                            class="category-img" alt="Home">
+                        <a href="products.html?category=home-kitchen" class="btn-link text-decoration-none">Shop now</a>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex flex-column gap-3">
+                    <!-- Sign in CTA for small card -->
+                    <div class="card category-card text-center p-3" style="height: auto;">
+                        <h4>Sign in for the best experience</h4>
+                        <a href="login.html" class="btn btn-warning btn-sm my-2">Sign in securely</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Featured Products -->
+            <section class="my-5 bg-white p-4 shadow-sm text-dark">
+                <h2 class="mb-4">Popular Products</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <!-- Product 1 -->
+                    <div class="col product-item" data-price="199.99" data-category="electronics" data-rating="4.5">
+                        <div class="card product-card h-100 border-0">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                                class="card-img-top" alt="Headphones">
+                            <div class="card-body px-0">
+                                <h5 class="card-title text-truncate">Premium Noise Cancelling Headphones</h5>
+                                <div class="rating mb-2">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <span class="text-muted small">(1,230)</span>
+                                </div>
+                                <p class="price mb-2">
+                                    <span class="small align-top">$</span>199<span class="small align-top">99</span>
+                                </p>
+                                <a href="product-details.html" class="btn btn-primary-custom w-100">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="col product-item" data-price="89.00" data-category="fashion" data-rating="4">
+                        <div class="card product-card h-100 border-0">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                                class="card-img-top" alt="Sneakers">
+                            <div class="card-body px-0">
+                                <h5 class="card-title text-truncate">Sport Running Sneakers</h5>
+                                <div class="rating mb-2">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span class="text-muted small">(850)</span>
+                                </div>
+                                <p class="price mb-2">
+                                    <span class="small align-top">$</span>89<span class="small align-top">00</span>
+                                </p>
+                                <a href="product-details.html" class="btn btn-primary-custom w-100">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="col product-item" data-price="149.50" data-category="electronics" data-rating="5">
+                        <div class="card product-card h-100 border-0">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                                class="card-img-top" alt="Smart Watch">
+                            <div class="card-body px-0">
+                                <h5 class="card-title text-truncate">Smart Fitness Watch</h5>
+                                <div class="rating mb-2">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="text-muted small">(2,100)</span>
+                                </div>
+                                <p class="price mb-2">
+                                    <span class="small align-top">$</span>149<span class="small align-top">50</span>
+                                </p>
+                                <a href="product-details.html" class="btn btn-primary-custom w-100">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="col product-item" data-price="599.00" data-category="camera" data-rating="3">
+                        <div class="card product-card h-100 border-0">
+                            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                                class="card-img-top" alt="Camera">
+                            <div class="card-body px-0">
+                                <h5 class="card-title text-truncate">Digital Camera 4K</h5>
+                                <div class="rating mb-2">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <span class="text-muted small">(320)</span>
+                                </div>
+                                <p class="price mb-2">
+                                    <span class="small align-top">$</span>599<span class="small align-top">00</span>
+                                </p>
+                                <a href="product-details.html" class="btn btn-primary-custom w-100">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="text-center py-3 mb-4">
+            <a href="#" class="text-white text-decoration-none">Back to top</a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Get to Know Us</h5>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Blog</a>
+                    <a href="#" class="footer-link">About E-Shop</a>
+                    <a href="#" class="footer-link">Investor Relations</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Make Money with Us</h5>
+                    <a href="#" class="footer-link">Sell products on E-Shop</a>
+                    <a href="#" class="footer-link">Sell on E-Shop Business</a>
+                    <a href="#" class="footer-link">Sell apps on E-Shop</a>
+                    <a href="#" class="footer-link">Become an Affiliate</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Payment Products</h5>
+                    <a href="#" class="footer-link">Business Card</a>
+                    <a href="#" class="footer-link">Shop with Points</a>
+                    <a href="#" class="footer-link">Reload Your Balance</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Let Us Help You</h5>
+
+                    <a href="#" class="footer-link">Your Orders</a>
+                    <a href="#" class="footer-link">Shipping Rates & Policies</a>
+                    <a href="#" class="footer-link">Returns & Replacements</a>
+                    <a href="#" class="footer-link">Help</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <a class="navbar-brand d-inline-block mb-3" href="#">E-Shop</a>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2026 E-Shop, Inc. or its affiliates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sidenav / Mobile Menu -->
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenav-header">
+            <i class="fa-solid fa-user-circle"></i> Hello, Sign in
+        </div>
+        <div class="sidenav-content">
+
+
+            <div class="sidenav-section-title">Shop By Department</div>
+            <a href="products.html">Electronics <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Computers <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Smart Home <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Arts & Crafts <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Programs & Features</div>
+            <a href="gift-cards.html">Gift Cards <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="registry.html">Registry <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="sell.html">Sell on E-Shop <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Help & Settings</div>
+
+            <a href="customer-service.html">Customer Service</a>
+            <a href="login.html">Sign In</a>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="closeBtn" class="close-btn-container">&times;</div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

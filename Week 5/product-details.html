@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Noise Cancelling Headphones - E-Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background-color: #fff;">
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- Brand -->
+                <a class="navbar-brand me-4" href="index.html">
+                    <i class="fa-solid fa-cart-shopping me-2"></i>E-Shop
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Content -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+
+                    <!-- Search Bar -->
+                    <form class="d-flex navbar-search my-2 my-lg-0" role="search">
+                        <div class="input-group">
+
+                            <input class="form-control" type="search" placeholder="Search E-Shop" aria-label="Search">
+                            <button class="btn btn-search" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Nav Links -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <div class="small">Hello, Sign in</div>
+                                <div class="fw-bold">Account & Lists</div>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="cart.html">
+                                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                                <span
+                                    class="badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill"
+                                    id="cart-badge-count">0</span>
+                                <span class="fw-bold ms-1">Cart</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sub-header for Categories -->
+        <div class="bg-dark text-white py-1 px-3 d-none d-lg-block" style="background-color: #232f3e !important;">
+            <div class="container-fluid d-flex align-items-center">
+                <a href="javascript:void(0)" id="nav-hamburger-menu" class="text-white text-decoration-none me-3"><i
+                        class="fa-solid fa-bars me-1"></i></a>
+                <a href="products.html" class="text-white text-decoration-none me-3">All Products</a>
+                <a href="todays-deals.html" class="text-white text-decoration-none me-3">Today's Deals</a>
+                <a href="customer-service.html" class="text-white text-decoration-none me-3">Customer Service</a>
+                <a href="registry.html" class="text-white text-decoration-none me-3">Registry</a>
+                <a href="gift-cards.html" class="text-white text-decoration-none me-3">Gift Cards</a>
+                <a href="sell.html" class="text-white text-decoration-none me-3">Sell</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container-fluid my-4 px-lg-5">
+
+        <!-- Breadcrumb -->
+        <div class="mb-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" style="font-size: 0.9rem;">
+                    <li class="breadcrumb-item"><a href="products.html"
+                            class="text-decoration-none text-muted">Electronics</a></li>
+                    <li class="breadcrumb-item"><a href="products.html"
+                            class="text-decoration-none text-muted">Headphones</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Over-Ear Headphones</li>
+                </ol>
+            </nav>
+        </div>
+
+        <div class="row">
+            <!-- Image Gallery Column -->
+            <div class="col-md-5 mb-4 position-relative">
+                <div class="d-flex sticky-top" style="top: 20px;">
+                    <!-- Thumbnails -->
+                    <div class="d-flex flex-column me-3 d-none d-sm-flex">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                            class="thumbnail-img active" alt="Thumb 1">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                            class="thumbnail-img" alt="Thumb 2">
+                        <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                            class="thumbnail-img" alt="Thumb 3">
+                        <img src="https://images.unsplash.com/photo-1524678606372-987d7b66156b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                            class="thumbnail-img" alt="Thumb 4">
+                    </div>
+                    <!-- Main Image -->
+                    <div class="flex-grow-1 text-center">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            class="img-fluid" style="max-height: 500px;" alt="Main Product Image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details Column -->
+            <div class="col-md-4 mb-4">
+                <h1 class="product-title mb-2">Premium Noise Cancelling Wireless Over-Ear Headphones with Microphone,
+                    Deep Bass, 30 Hour Playtime, Bluetooth 5.0</h1>
+
+                <div class="mb-2">
+                    <a href="#" class="text-decoration-none small" style="color: #007185;">Visit the Audio Store</a>
+                </div>
+
+                <div class="d-flex align-items-center mb-3">
+                    <div class="rating me-2">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="text-decoration-none small me-2" style="color: #007185;">2,401 ratings</a>
+                    <span class="text-muted small">|</span>
+                    <a href="#" class="text-decoration-none small ms-2" style="color: #007185;">100+ answered
+                        questions</a>
+                </div>
+
+                <hr>
+
+                <div class="mb-3">
+                    <span class="text-muted small mb-1 d-block">List Price: <span
+                            class="text-decoration-line-through">$249.99</span></span>
+                    <div class="d-flex align-items-baseline">
+                        <span class="fs-5 text-muted me-1">-20%</span>
+                        <span class="product-price-large fw-medium me-1"><sup class="fs-6">$</sup>199<sup
+                                class="fs-6">99</sup></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <span class="fw-bold">Color:</span> <span class="text-muted">Matte Black</span>
+                    <div class="mt-2">
+                        <button class="btn btn-sm btn-outline-dark active me-2" style="width: 80px;">Black</button>
+                        <button class="btn btn-sm btn-outline-secondary me-2" style="width: 80px;">Silver</button>
+                        <button class="btn btn-sm btn-outline-secondary" style="width: 80px;">Blue</button>
+                    </div>
+                </div>
+
+                <div class="my-4">
+                    <h5 class="fs-6 fw-bold">About this item</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><i class="fa-solid fa-circle fa-2xs me-2 text-dark"></i>INDUSTRY LEADING NOISE
+                            CANCELLATION: Advanced noise cancelling technology blocks out ambient noise for a focused
+                            listening experience.</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle fa-2xs me-2 text-dark"></i>PREMIUM SOUND QUALITY:
+                            Enjoy high-resolution audio with deep, punchy bass and crystal clear highs.</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle fa-2xs me-2 text-dark"></i>ALL-DAY COMFORT: Super
+                            soft ear pads and adjustable headband ensure comfort for long listening sessions.</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle fa-2xs me-2 text-dark"></i>LONG BATTERY LIFE: Up
+                            to 30 hours of battery life on a single charge. Quick charging gives 5 hours of playback in
+                            just 10 minutes.</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle fa-2xs me-2 text-dark"></i>CRYSTAL CLEAR CALLS:
+                            Built-in microphone with voice isolation for clear hands-free calling.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Buy Box Column -->
+            <div class="col-md-3">
+                <div class="buy-box bg-white">
+                    <div class="mb-2">
+                        <span class="product-price-large fw-medium"><sup class="fs-6">$</sup>199<sup
+                                class="fs-6">99</sup></span>
+                    </div>
+                    <div class="mb-3">
+                        <div class="text-muted small">No Import Fees Deposit & $12.98 Shipping to your location</div>
+                        <div class="small mt-2">Delivery <span class="fw-bold">Mon, Dec 25</span>. Order within <span
+                                class="text-success">2 hrs 30 mins</span></div>
+                    </div>
+                    <div class="mb-3">
+                        <span class="stock-status">In Stock</span>
+                    </div>
+
+                    <div class="mb-3">
+                        <select class="form-select form-select-sm rounded-pill mb-3" aria-label="Quantity">
+                            <option value="1" selected>Qty: 1</option>
+                            <option value="2">Qty: 2</option>
+                            <option value="3">Qty: 3</option>
+                            <option value="4">Qty: 4</option>
+                            <option value="5">Qty: 5</option>
+                        </select>
+
+                        <button class="btn btn-primary-custom w-100 rounded-pill mb-2">Add to Cart</button>
+                        <button class="btn btn-buy-now w-100 rounded-pill mb-2">Buy Now</button>
+                    </div>
+
+                    <div class="small text-muted mb-3">
+                        <table class="w-100">
+                            <tr>
+                                <td class="py-1">Ships from</td>
+                                <td class="py-1 text-end">E-Shop</td>
+                            </tr>
+                            <tr>
+                                <td class="py-1">Sold by</td>
+                                <td class="py-1 text-end">AudioTech Inc.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="form-check small mb-3">
+                        <input class="form-check-input" type="checkbox" id="giftCheck">
+                        <label class="form-check-label" for="giftCheck">
+                            Add a gift receipt for easy returns
+                        </label>
+                    </div>
+
+                    <button class="btn btn-sm btn-outline-secondary w-100 mb-2">Add to List</button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Similar Products Section -->
+        <div class="mb-5">
+            <h4 class="fw-bold mb-4">Products related to this item</h4>
+            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3">
+                <!-- Similar Item 1 -->
+                <div class="col">
+                    <div class="card h-100 border-0">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=60"
+                            class="card-img-top" alt="Similar">
+                        <div class="card-body p-1">
+                            <a href="#" class="text-dark text-decoration-none small fw-bold">Similar Wireless...</a>
+                            <div class="rating small mt-1">
+                                <i class="fa-solid fa-star text-warning"></i> 4.5
+                            </div>
+                            <div class="text-danger small mt-1">$49.99</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Similar Item 2 -->
+                <div class="col">
+                    <div class="card h-100 border-0">
+                        <img src="https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=60"
+                            class="card-img-top" alt="Similar">
+                        <div class="card-body p-1">
+                            <a href="#" class="text-dark text-decoration-none small fw-bold">Bluetooth Head...</a>
+                            <div class="rating small mt-1">
+                                <i class="fa-solid fa-star text-warning"></i> 4.3
+                            </div>
+                            <div class="text-danger small mt-1">$59.99</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Similar Item 3 -->
+                <div class="col">
+                    <div class="card h-100 border-0">
+                        <img src="https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=60"
+                            class="card-img-top" alt="Similar">
+                        <div class="card-body p-1">
+                            <a href="#" class="text-dark text-decoration-none small fw-bold">Pro Headset</a>
+                            <div class="rating small mt-1">
+                                <i class="fa-solid fa-star text-warning"></i> 4.7
+                            </div>
+                            <div class="text-danger small mt-1">$129.99</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="text-center py-3 mb-4">
+            <a href="#" class="text-white text-decoration-none">Back to top</a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Get to Know Us</h5>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Blog</a>
+                    <a href="#" class="footer-link">About E-Shop</a>
+                    <a href="#" class="footer-link">Investor Relations</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Make Money with Us</h5>
+                    <a href="#" class="footer-link">Sell products on E-Shop</a>
+                    <a href="#" class="footer-link">Sell on E-Shop Business</a>
+                    <a href="#" class="footer-link">Sell apps on E-Shop</a>
+                    <a href="#" class="footer-link">Become an Affiliate</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Payment Products</h5>
+                    <a href="#" class="footer-link">Business Card</a>
+                    <a href="#" class="footer-link">Shop with Points</a>
+                    <a href="#" class="footer-link">Reload Your Balance</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Let Us Help You</h5>
+
+                    <a href="#" class="footer-link">Your Orders</a>
+                    <a href="#" class="footer-link">Shipping Rates & Policies</a>
+                    <a href="#" class="footer-link">Returns & Replacements</a>
+                    <a href="#" class="footer-link">Help</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <a class="navbar-brand d-inline-block mb-3" href="#">E-Shop</a>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2026 E-Shop, Inc. or its affiliates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sidenav / Mobile Menu -->
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenav-header">
+            <i class="fa-solid fa-user-circle"></i> Hello, Sign in
+        </div>
+        <div class="sidenav-content">
+
+
+            <div class="sidenav-section-title">Shop By Department</div>
+            <a href="products.html">Electronics <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Computers <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Smart Home <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Arts & Crafts <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Programs & Features</div>
+            <a href="gift-cards.html">Gift Cards <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="registry.html">Registry <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="sell.html">Sell on E-Shop <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Help & Settings</div>
+
+            <a href="customer-service.html">Customer Service</a>
+            <a href="login.html">Sign In</a>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="closeBtn" class="close-btn-container">&times;</div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

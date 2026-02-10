@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registry - E-Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand me-4" href="index.html"><i class="fa-solid fa-cart-shopping me-2"></i>E-Shop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <form class="d-flex navbar-search my-2 my-lg-0" role="search">
+                        <div class="input-group">
+
+                            <input class="form-control" type="search" placeholder="Search E-Shop">
+                            <button class="btn btn-search" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="login.html">
+                                <div class="small">Hello, Sign in</div>
+                                <div class="fw-bold">Account & Lists</div>
+                            </a></li>
+
+                        <li class="nav-item"><a class="nav-link position-relative" href="cart.html"><i
+                                    class="fa-solid fa-cart-shopping fa-lg"></i><span
+                                    class="badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill"
+                                    id="cart-badge-count">0</span><span class="fw-bold ms-1">Cart</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="bg-dark text-white py-1 px-3 d-none d-lg-block" style="background-color: #232f3e !important;">
+            <div class="container-fluid d-flex align-items-center">
+                <a href="javascript:void(0)" id="nav-hamburger-menu" class="text-white text-decoration-none me-3"><i
+                        class="fa-solid fa-bars me-1"></i></a>
+                <a href="products.html" class="text-white text-decoration-none me-3">All Products</a>
+                <a href="todays-deals.html" class="text-white text-decoration-none me-3">Today's Deals</a>
+                <a href="customer-service.html" class="text-white text-decoration-none me-3">Customer Service</a>
+                <a href="registry.html" class="text-white text-decoration-none me-3">Registry</a>
+                <a href="gift-cards.html" class="text-white text-decoration-none me-3">Gift Cards</a>
+                <a href="sell.html" class="text-white text-decoration-none me-3">Sell</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-fluid p-0">
+        <div class="position-relative"
+            style="height: 400px; background: url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center; background-size: cover;">
+            <div
+                class="position-absolute top-50 start-50 translate-middle text-center text-white bg-dark bg-opacity-50 p-5 rounded">
+                <h1 class="display-4 fw-bold">E-Shop Registry</h1>
+                <p class="lead">Celebrate every milestone with the perfect gifts.</p>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button class="btn btn-warning btn-lg">Create a Registry</button>
+                    <button class="btn btn-outline-light btn-lg">Find a Registry</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <h2 class="text-center mb-5">Whatever you're celebrating, we've got you covered</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Wedding Registry</h3>
+                    <p>Everything you need for your new life together.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Baby Registry</h3>
+                    <p>Prepare for your new arrival with top baby brands.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Birthday and More</h3>
+                    <p>Celebrate birthdays, housewarmings, and more.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="text-center py-3 mb-4"><a href="#" class="text-white text-decoration-none">Back to top</a></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Get to Know Us</h5><a href="#" class="footer-link">Careers</a><a href="#"
+                        class="footer-link">About E-Shop</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Make Money with Us</h5><a href="#" class="footer-link">Sell products</a><a
+                        href="#" class="footer-link">Become an Affiliate</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Payment Products</h5><a href="#" class="footer-link">Business Card</a><a
+                        href="#" class="footer-link">Shop with Points</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Let Us Help You</h5><a href="#" class="footer-link">Help</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2026 E-Shop, Inc.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Sidenav / Mobile Menu -->
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenav-header">
+            <i class="fa-solid fa-user-circle"></i> Hello, Sign in
+        </div>
+        <div class="sidenav-content">
+
+
+            <div class="sidenav-section-title">Shop By Department</div>
+            <a href="products.html">Electronics <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Computers <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Smart Home <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Arts & Crafts <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Programs & Features</div>
+            <a href="gift-cards.html">Gift Cards <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="registry.html">Registry <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="sell.html">Sell on E-Shop <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Help & Settings</div>
+
+            <a href="customer-service.html">Customer Service</a>
+            <a href="login.html">Sign In</a>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="closeBtn" class="close-btn-container">&times;</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

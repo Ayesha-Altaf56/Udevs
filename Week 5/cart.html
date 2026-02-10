@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - E-Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- Brand -->
+                <a class="navbar-brand me-4" href="index.html">
+                    <i class="fa-solid fa-cart-shopping me-2"></i>E-Shop
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Content -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+
+                    <!-- Search Bar -->
+                    <form class="d-flex navbar-search my-2 my-lg-0" role="search">
+                        <div class="input-group">
+
+                            <input class="form-control" type="search" placeholder="Search E-Shop" aria-label="Search">
+                            <button class="btn btn-search" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Nav Links -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <div class="small">Hello, Sign in</div>
+                                <div class="fw-bold">Account & Lists</div>
+                            </a>
+                        </li>
+
+                        <!-- Active Cart Link -->
+                        <li class="nav-item">
+                            <a class="nav-link position-relative active" href="cart.html">
+                                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                                <span
+                                    class="badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill"
+                                    id="cart-badge-count">0</span>
+                                <span class="fw-bold ms-1">Cart</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sub-header for Categories -->
+        <div class="bg-dark text-white py-1 px-3 d-none d-lg-block" style="background-color: #232f3e !important;">
+            <div class="container-fluid d-flex align-items-center">
+                <a href="javascript:void(0)" id="nav-hamburger-menu" class="text-white text-decoration-none me-3"><i
+                        class="fa-solid fa-bars me-1"></i></a>
+                <a href="products.html" class="text-white text-decoration-none me-3">All Products</a>
+                <a href="todays-deals.html" class="text-white text-decoration-none me-3">Today's Deals</a>
+                <a href="customer-service.html" class="text-white text-decoration-none me-3">Customer Service</a>
+                <a href="registry.html" class="text-white text-decoration-none me-3">Registry</a>
+                <a href="gift-cards.html" class="text-white text-decoration-none me-3">Gift Cards</a>
+                <a href="sell.html" class="text-white text-decoration-none me-3">Sell</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container-fluid my-4 px-lg-5">
+        <div class="row">
+            <!-- Left Column: Cart Items -->
+            <div class="col-lg-9 col-md-8">
+                <div class="bg-white p-4 shadow-sm cart-container">
+                    <div class="d-flex justify-content-between align-items-end cart-header">
+                        <h1 class="h3 fw-normal mb-0">Shopping Cart</h1>
+                        <a href="#" class="text-decoration-none small text-muted">Deselect all items</a>
+                    </div>
+
+                    <div class="text-end mb-2 border-bottom pb-1">
+                        <span class="text-muted small">Price</span>
+                    </div>
+
+                    <div id="cart-items-wrapper">
+                        <!-- Cart items will be loaded dynamically via JavaScript -->
+                        <div class="text-center py-5 empty-cart-message d-none">
+                            <h4>Your cart is empty</h4>
+                            <p>Check out our products and add items to your cart.</p>
+                            <a href="index.html" class="btn btn-primary-custom mt-3">Continue Shopping</a>
+                        </div>
+                    </div>
+
+                    <div class="text-end pt-3">
+                        <span class="h5">Subtotal (<span id="cart-count-subtotal">4 items</span>): <span class="fw-bold"
+                                id="cart-subtotal-price">$339.96</span></span>
+                    </div>
+
+                </div>
+
+                <!-- Saved for Later (Optional Visual) -->
+                <div class="bg-white p-4 shadow-sm mt-4">
+                    <h5 class="mb-3">Your Items Saved for Later (<span id="saved-count">1</span>)</h5>
+                    <div id="saved-items-container">
+                        <div class="row align-items-center border-top py-3 saved-item">
+                            <div class="col-md-2">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=60"
+                                    class="img-fluid" alt="Saved Item">
+                            </div>
+                            <div class="col-md-8">
+                                <a href="#" class="text-decoration-none fw-bold">Red Athletic Running Shoes</a>
+                                <div class="text-success small">In Stock</div>
+                                <div class="cart-actions mt-1">
+                                    <a href="#" class="ms-0 action-move-to-cart">Move to Cart</a>
+                                    <a href="#" class="action-delete-saved">Delete</a>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-end">
+                                <span class="cart-price fw-bold">$85.50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Sidebar: Order Summary -->
+            <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                <div class="cart-summary shadow-sm bg-white">
+                    <div class="mb-3">
+                        <span class="h5 fw-normal">Subtotal (<span id="cart-summary-count">4 items</span>):</span>
+                        <div class="h5 fw-bold mt-1" id="cart-summary-price">$339.96</div>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="giftSummary">
+                        <label class="form-check-label small" for="giftSummary">
+                            This order contains a gift
+                        </label>
+                    </div>
+
+                    <button id="checkout-btn" class="btn btn-primary-custom w-100 rounded-pill mb-3">Proceed to
+                        Checkout</button>
+                </div>
+
+                <!-- Sponsored or Recommendations -->
+                <div class="bg-white p-3 shadow-sm mt-3 border rounded text-center">
+                    <p class="small fw-bold mb-2">Customers who bought items in your cart also bought:</p>
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+                        class="img-fluid mb-2" style="height: 100px;" alt="Recommendation">
+                    <a href="#" class="d-block text-decoration-none small mb-1 text-truncate">Headphones</a>
+                    <div class="rating small mb-1 text-warning">
+                        <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                            class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-danger small fw-bold">$15.99</span>
+                    <button class="btn btn-sm btn-warning w-100 rounded-pill mt-2 from-control-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="text-center py-3 mb-4">
+            <a href="#" class="text-white text-decoration-none">Back to top</a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Get to Know Us</h5>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Blog</a>
+                    <a href="#" class="footer-link">About E-Shop</a>
+                    <a href="#" class="footer-link">Investor Relations</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Make Money with Us</h5>
+                    <a href="#" class="footer-link">Sell products on E-Shop</a>
+                    <a href="#" class="footer-link">Sell on E-Shop Business</a>
+                    <a href="#" class="footer-link">Sell apps on E-Shop</a>
+                    <a href="#" class="footer-link">Become an Affiliate</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Payment Products</h5>
+                    <a href="#" class="footer-link">Business Card</a>
+                    <a href="#" class="footer-link">Shop with Points</a>
+                    <a href="#" class="footer-link">Reload Your Balance</a>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Let Us Help You</h5>
+                    <a href="#" class="footer-link">Your Orders</a>
+                    <a href="#" class="footer-link">Shipping Rates & Policies</a>
+                    <a href="#" class="footer-link">Returns & Replacements</a>
+                    <a href="#" class="footer-link">Help</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <a class="navbar-brand d-inline-block mb-3" href="#">E-Shop</a>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2026 E-Shop, Inc. or its affiliates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sidenav / Mobile Menu -->
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenav-header">
+            <i class="fa-solid fa-user-circle"></i> Hello, Sign in
+        </div>
+        <div class="sidenav-content">
+
+
+            <div class="sidenav-section-title">Shop By Department</div>
+            <a href="products.html">Electronics <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Computers <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Smart Home <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Arts & Crafts <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Programs & Features</div>
+            <a href="gift-cards.html">Gift Cards <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="registry.html">Registry <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="sell.html">Sell on E-Shop <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Help & Settings</div>
+            <a href="customer-service.html">Customer Service</a>
+            <a href="login.html">Sign In</a>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="closeBtn" class="close-btn-container">&times;</div>
+
+    <!-- Sidenav / Mobile Menu -->
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenav-header">
+            <i class="fa-solid fa-user-circle"></i> Hello, Sign in
+        </div>
+        <div class="sidenav-content">
+            <div class="sidenav-section-title">Digital Content & Devices</div>
+            <a href="#">E-Shop Music <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="#">Kindle E-readers & Books <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="#">Appstore for Android <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Shop By Department</div>
+            <a href="products.html">Electronics <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Computers <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Smart Home <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="products.html">Arts & Crafts <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Programs & Features</div>
+            <a href="gift-cards.html">Gift Cards <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="registry.html">Registry <i class="fa-solid fa-chevron-right text-muted"></i></a>
+            <a href="sell.html">Sell on E-Shop <i class="fa-solid fa-chevron-right text-muted"></i></a>
+
+            <div class="sidenav-divider"></div>
+
+            <div class="sidenav-section-title">Help & Settings</div>
+            <a href="customer-service.html">Customer Service</a>
+            <a href="login.html">Sign In</a>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="closeBtn" class="close-btn-container">&times;</div>
+
+    <!-- Invoice Modal -->
+    <div class="modal fade" id="invoiceModal" tabindex="-1" aria-labelledby="invoiceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 pt-0" id="invoice-content">
+                    <!-- Invoice content will be injected here -->
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary-custom" onclick="window.print()">Print Invoice</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
